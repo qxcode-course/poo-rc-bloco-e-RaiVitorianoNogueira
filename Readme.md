@@ -8,6 +8,7 @@ matricula: "582017"
 ## Vou programar no meu setup local
 
 - Se for a primeira configuração
+
   - Instale git, python, ide(vscode), compiladores
   - Configure sua chave git ssh
   - Configure o pipx
