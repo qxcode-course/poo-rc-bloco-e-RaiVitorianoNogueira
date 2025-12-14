@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 
+
 class Pagamento(ABC):
     def __init__(self, valor : float, descricao : str):
         self.valor = valor
@@ -21,7 +22,7 @@ class Pagamento(ABC):
     def processar(self):
         pass
 
-
+#cartao
 
 
 
@@ -46,7 +47,7 @@ class CartaoCredito(Pagamento):
 
 
 
-
+#Pixxx
 
 
 class Pix(Pagamento):
@@ -103,7 +104,7 @@ def main():
             "9999 8888 7777 6666",
             "Cliente Y",
             700
-        ),  # deve falhar
+        ),
     ]
 
     for pagamento in pagamentos:
