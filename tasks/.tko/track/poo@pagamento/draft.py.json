@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-14_18-40-15",
+            "content": "@@ -1,223 +1,5 @@\n-from abc import ABC, abstractclassmethod%0A%0A%0Aclass Pagamento(ABC):%0A    def __init__(self, valor : float, descricao : str):%0A        self.valor = valor%0A        self.nome = descricao%0A%0A%0A    def resumo()%0A%0A    def validar_valor():%0A\n+class\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-12-14_18-46-46",
+            "content": "@@ -154,25 +154,20 @@\n    self.\n-descricao\n+nome\n  = descr\n@@ -192,81 +192,9 @@\n umo(\n-self):%0A        print(f%22Pagamento de R$ %7Bself.valor%7D: %7Bself.descricao%7D%22)%0A%0A\n+)\n %0A%0A  \n@@ -217,14 +217,7 @@\n lor(\n-self):%0A%0A%0A\n+):\n %0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-12-14_18-51-29",
+            "content": "from abc import ABC, abstractclassmethod\n\n\nclass Pagamento(ABC):\n    def __init__(self, valor : float, descricao : str):\n        self.valor = valor\n        self.descricao = descricao\n\n\n    def resumo(self):\n        print(f\"Pagamento de R$ {self.valor}: {self.descricao}\")\n\n\n\n    def validar_valor(self):\n\n\n\n",
+            "lines": "18"
+        }
+    ]
+}
