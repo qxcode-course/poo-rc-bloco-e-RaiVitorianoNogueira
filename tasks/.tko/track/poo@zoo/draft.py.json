@@ -1,3 +1,14 @@
 {
-    "patches": []
+    "patches": [
+        {
+            "label": "2025-12-14_17-05-32",
+            "content": "@@ -197,17 +197,16 @@\n     pass\n- \n %0A%0Adef br\n@@ -225,94 +225,13 @@\n do: \n-Brinquedo):%0A    brinquedo.apertar()%0A    brinquedo.jogar_no_chao()%0A    print(brinquedo)\n+Any):\n %0A%0A%0A%0A\n@@ -254,16 +254,24 @@\n inquedo)\n+ -%3E None\n :%0A    de\n@@ -281,32 +281,24 @@\n pertar(self)\n- -%3E None\n :%0A        pr\n@@ -490,32 +490,8 @@\n ():%0A\n-    def apertar(self):%0A%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-12-14_17-26-02",
+            "content": "from typing import Any\nfrom abc import ABC, abstractmethod\n\nclass Brinquedo(ABC):\n    @abstractmethod\n    def apertar(self):\n        pass\n\n    @abstractmethod\n    def jogar_no_chao(self):    \n        pass \n\ndef brincar(briquedo: Brinquedo):\n    brinquedo.apertar()\n    brinquedo.jogar_no_chao()\n    print(brinquedo)\n\n\n\nclass Ursinho(Brinquedo):\n    def apertar(self) -> None:\n        print(\"O ursinho \u00e9 macio!\")\n\n    def jogar_no_chao(self) -> None:\n        print(\"O ursinho quica!\")\n\n    def __str__(self) -> str:\n        return \"Ursinho de pel\u00facia\"\n    \n\n\nclass Chinela():\n    def apertar(self):\n\n    \n",
+            "lines": "35"
+        }
+    ]
 }
