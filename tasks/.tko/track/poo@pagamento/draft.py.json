@@ -12,8 +12,23 @@
         },
         {
             "label": "2025-12-14_18-51-29",
-            "content": "from abc import ABC, abstractclassmethod\n\n\nclass Pagamento(ABC):\n    def __init__(self, valor : float, descricao : str):\n        self.valor = valor\n        self.descricao = descricao\n\n\n    def resumo(self):\n        print(f\"Pagamento de R$ {self.valor}: {self.descricao}\")\n\n\n\n    def validar_valor(self):\n\n\n\n",
+            "content": "@@ -301,309 +301,7 @@\n f):%0A\n-        if self.valor %3C= 0:%0A            raise ValueError(%22Valor inv%C3%A1lido para pagamento%22)%0A        %0A%0A    @abstractmethod%0A    def processar(self):%0A        pass%0A%0A%0A%0A%0A%0A%0Aclass CartaoCredito(Pagamento):%0A    def __init__(self, valor, descricao, numero, nome_titular, limite_disponivel):%0A        super()%0A%0A%0A%0A%0A%0A%0A%0A\n %0A%0A%0A\n",
             "lines": "18"
+        },
+        {
+            "label": "2025-12-14_22-43-48",
+            "content": "@@ -18,24 +18,29 @@\n BC, abstract\n+class\n method%0A%0A%0Acla\n@@ -595,296 +595,8 @@\n er()\n-.__init__(valor, descricao)%0A        self.numero = numero%0A        self.nome_titular = nome_titular%0A        self.limite_disponivel = limite_disponivel%0A%0A%0A    def processar(self):%0A        if self.valor %3E self.limite_disponivel:%0A            raise Exception(f%22Limite insufuciente no cart%C3%A3o%22)%0A%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-12-14_22-50-07",
+            "content": "@@ -876,833 +876,8 @@\n o%22)%0A\n-        %0A%0A%0A        self.limite_disponivel -= self.valor%0A        print(f%22Pagamento aprovado no cart%C3%A3o %7Bself.nome_titular%7D.%22%0A              f%22Limite restante: %7Bself.limite_disponivel%7D%22)%0A%0A%0A%0A%0A%0A%0Aclass Pix(Pagamento):%0A    def __init__(self, valor , descricao, chave, banco):%0A        super().__init__(valor, descricao)%0A        self.chave = chave%0A        self.banco = banco%0A%0A    def processar(self):%0A        print(f%22PIX  enviado via  %7Bself.banco%7D usado chave %7Bself.chave%7D%22)%0A%0A%0Aclass Boleto(Pagamento):%0A    def __init__(self, valor, descricao, codigo_barras, vencimento):%0A        super().__init__(valor, descricao)%0A        self.codigo_barras = codigo_barras%0A        self.vencimento  = vencimento %0A%0A%0A    def processar(self):%0A        print(f%22Boleto gerado. Aguardando pagamento...%22)%0A%0A%0A%0A%0Adef processar_pagamento(pagamento: Pagamento):%0A    \n %0A%0A%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-12-14_23-33-56",
+            "content": "from abc import ABC, abstractmethod\n\n\nclass Pagamento(ABC):\n    def __init__(self, valor : float, descricao : str):\n        self.valor = valor\n        self.descricao = descricao\n\n\n    def resumo(self):\n        print(f\"Pagamento de R$ {self.valor}: {self.descricao}\")\n\n\n\n    def validar_valor(self):\n        if self.valor <= 0:\n            raise ValueError(\"Valor inv\u00e1lido para pagamento\")\n        \n\n    @abstractmethod\n    def processar(self):\n        pass\n\n\n\n\n\n\nclass CartaoCredito(Pagamento):\n    def __init__(self, valor, descricao, numero, nome_titular, limite_disponivel):\n        super().__init__(valor, descricao)\n        self.numero = numero\n        self.nome_titular = nome_titular\n        self.limite_disponivel = limite_disponivel\n\n\n    def processar(self):\n        if self.valor > self.limite_disponivel:\n            raise Exception(f\"Limite insufuciente no cart\u00e3o\")\n        \n\n\n        self.limite_disponivel -= self.valor\n        print(f\"Pagamento aprovado no cart\u00e3o {self.nome_titular}.\"\n              f\"Limite restante: {self.limite_disponivel}\")\n\n\n\n\n\n\nclass Pix(Pagamento):\n    def __init__(self, valor , descricao, chave, banco):\n        super().__init__(valor, descricao)\n        self.chave = chave\n        self.banco = banco\n\n    def processar(self):\n        print(f\"PIX  enviado via  {self.banco} usado chave {self.chave}\")\n\n\nclass Boleto(Pagamento):\n    def __init__(self, valor, descricao, codigo_barras, vencimento):\n        super().__init__(valor, descricao)\n        self.codigo_barras = codigo_barras\n        self.vencimento  = vencimento \n\n\n    def processar(self):\n        print(f\"Boleto gerado. Aguardando pagamento...\")\n\n\n\n\ndef processar_pagamento(pagamento: Pagamento):\n    \n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "lines": "88"
         }
     ]
 }
