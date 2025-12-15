@@ -1,31 +1,34 @@
-from  abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
+
+
 
 class Veiculo(ABC):
-    def __init__(self, vid: str, tipo: str, entrada: int):
+    def __init__(self, vid: str, entrada: int, tipo: str):
         self.id = vid
         self.entrada = entrada
         self.tipo = tipo
 
     @abstractmethod
-    def calcularValor(self, saida : int) -> float:
+    def calcularValor(self, saida: int) -> float:
         pass
 
-
     def __str__(self):
-        return(f"{self.tipo:_>10} : {self.id:_>10} : {self.entrada}")
-        
+        return (
+            self.tipo.rjust(10, "_")
+            + " : "
+            + self.id.rjust(10, "_")
+            + " : "
+            + str(self.entrada)
+        )
 
 
 
 class Bike(Veiculo):
-    def __init__(self, vid: str, entrada : int):
+    def __init__(self, vid: str, entrada: int):
         super().__init__(vid, entrada, "Bike")
 
     def calcularValor(self, saida: int) -> float:
         return 3.0
-    
-    
-
 
 
 
@@ -33,29 +36,20 @@ class Moto(Veiculo):
     def __init__(self, vid: str, entrada: int):
         super().__init__(vid, entrada, "Moto")
 
-
     def calcularValor(self, saida: int) -> float:
         tempo = saida - self.entrada
         return tempo / 20
-    
+
 
 
 class Carro(Veiculo):
-    def __init__(self, vid: str, entrada : str):
+    def __init__(self, vid: str, entrada: int):
         super().__init__(vid, entrada, "Carro")
 
     def calcularValor(self, saida: int) -> float:
         tempo = saida - self.entrada
         valor = tempo / 10
-        return valor if valor >=  5 else 5.0
-    
-
-
-
-
-
-
-
+        return valor if valor >= 5 else 5.0
 
 
 
@@ -94,118 +88,35 @@ class Estacionamento:
 
 
 
-
-
-    
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
-    estacionamento = Estacionamento()
+    est = Estacionamento()
 
     while True:
-        line = input().strip()
-        print("$" + line)
+        try:
+            line = input().strip()
+        except EOFError:
+            break
+
+        print(f"${line}")
         args = line.split()
+
+        if not args:
+            continue
 
         if args[0] == "end":
             break
+
         elif args[0] == "tempo":
-            tempo_atual += int(args[1])
+            est.tempo(int(args[1]))
+
         elif args[0] == "estacionar":
-            tipo = args[1]
-            id = args[2]
+            est.estacionar(args[1], args[2])
 
-            if tipo == "bike":
-                estacionamento.estacionar(Bike(id, tempo_atual))
-            elif tipo == "moto":
-                estacionamento.estacionar(Moto(id, tempo_atual))
-            elif tipo == "carro":
-                estacionamento.estacionar(Carro(id, tempo_atual))
-            else:
-                print("fail:tipo invalido")
         elif args[0] == "pagar":
-            id = args[1]
-            veiculo =  estacionamento.buscar(id)
+            est.pagar(args[1])
 
-
-            if veiculo is None:
-                print("fail: veiculo não encontrado")
-            else:
-                valor = veiculo.calcularValor(tempo_atual)
-                print(
-                    f"{veiculo.tipo} chegou {veiculo.entrada} saiu {tempo_atual}. "
-                    f"Pagar R$ {valor:.2f}"
-                )
-                estacionamento.remover(id)
         elif args[0] == "show":
-            print(estacionamento)
-            print(f"Hora atual: {tempo_atual}")
-
-        else:
-            print("fail: comando invalido")
-
-        
-            
-
-
-
-       
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            est.show()
 
 
 if __name__ == "__main__":
