@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-14_23-55-28",
+            "content": "@@ -1,59 +0,0 @@\n-from  abc import ABC, abstractmethod%0A%0AClass Veiculo(ABC):%0A%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-15_00-07-04",
+            "content": "@@ -31,17 +31,17 @@\n method%0A%0A\n-c\n+C\n lass Vei\n@@ -55,269 +55,5 @@\n C):%0A\n-    def __init__(self, vid: str, tipo: str, entrada: int):%0A        self.id = vid%0A        self.entrada = entrada%0A        self.tipo = tipo%0A%0A    @abstractmethod%0A    def calcularValor(self, saida : int) -%3E float:%0A        pass%0A%0A%0A    def __str__(self):%0A        %0A        \n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-12-15_00-16-29",
+            "content": "@@ -310,82 +310,8 @@\n     \n-return(f%22%7Bself.tipo:_%3E10%7D : %7Bself.id:_%3E10%7D : %7Bself.entrada%7D%22)%0A        %0A%0A%0A%0A\n %0A   \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-12-15_00-27-38",
+            "content": "@@ -384,63 +384,8 @@\n %0A%0A%0A%0A\n-class Bike(Veiculo):%0A    def __init__(self):%0A        %0A%0A\n %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-12-15_00-41-36",
+            "content": "@@ -426,188 +426,19 @@\n self\n-, vid: str, entrada : int):%0A        super().__init__(vid, entrada, %22Bike%22)%0A%0A    def calcularValor(self, saida: int) -%3E float:%0A        return 3.0%0A    %0A%0A%0A%0A%0Aclass Moto(Veiculo):%0A    %0A\n+):%0A        \n %0A%0A%0A \n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-12-15_00-54-19",
+            "content": "@@ -572,21 +572,16 @@\n .0%0A    %0A\n-    %0A\n %0A%0A%0A%0Aclas\n@@ -605,426 +605,17 @@\n     \n-def __init__(self, vid: str, entrada: int):%0A        super().__init__(vid, entrada, %22Moto%22):%0A%0A%0A    def calcularValor(self, saida: int) -%3E float:%0A        tempo = saida - self.entrada%0A        return tempo / 20%0A    %0A%0A%0A%0A%0A%0A        %0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0Adef main():%0A    estacionamento = Estacionamento()%0A%0A    while True:%0A        try:%0A            line = input().strip()%0A        except %0A    %0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0Amain()\n+%0A%0A%0A%0A        %0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-12-15_01-00-44",
+            "content": "from  abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, vid: str, tipo: str, entrada: int):\n        self.id = vid\n        self.entrada = entrada\n        self.tipo = tipo\n\n    @abstractmethod\n    def calcularValor(self, saida : int) -> float:\n        pass\n\n\n    def __str__(self):\n        return(f\"{self.tipo:_>10} : {self.id:_>10} : {self.entrada}\")\n        \n\n\n\nclass Bike(Veiculo):\n    def __init__(self, vid: str, entrada : int):\n        super().__init__(vid, entrada, \"Bike\")\n\n    def calcularValor(self, saida: int) -> float:\n        return 3.0\n    \n    \n\n\n\n\nclass Moto(Veiculo):\n    def __init__(self, vid: str, entrada: int):\n        super().__init__(vid, entrada, \"Moto\"):\n\n\n    def calcularValor(self, saida: int) -> float:\n        tempo = saida - self.entrada\n        return tempo / 20\n    \n\n\n\n\n\n        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    estacionamento = Estacionamento()\n\n    while True:\n        try:\n            line = input().strip()\n        except \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmain()",
+            "lines": "109"
+        }
+    ]
+}
