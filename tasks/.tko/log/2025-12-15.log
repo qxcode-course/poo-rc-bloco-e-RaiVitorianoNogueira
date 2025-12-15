@@ -23,3 +23,29 @@
 2025-12-15 01:02:41, SELF, v:1, k:poo@zoo, rate:100, alone:10, study:60
 2025-12-15 01:02:46, MOVE, v:1, k:poo@estacionamento, mode:PICK
 2025-12-15 01:02:49, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 01:31:32, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:120
+2025-12-15 01:42:18, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:128
+2025-12-15 02:08:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:150
+2025-12-15 02:08:58, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 02:09:26, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 02:09:27, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:16:46, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 02:16:49, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-15 02:16:51, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-15 02:17:15, SELF, v:1, k:poo@zoo, rate:100, guide:vi_a_aula_sobre_polimorfismo, alone:10, study:60
+2025-12-15 02:17:17, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 02:17:18, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:159
+2025-12-15 02:17:24, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 02:17:25, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 02:17:33, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:18:58, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:162
+2025-12-15 02:18:59, EXEC, v:1, k:poo@estacionamento, mode:FREE
+2025-12-15 02:26:26, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:181
+2025-12-15 02:26:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:34:57, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:189
+2025-12-15 02:36:01, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:212
+2025-12-15 02:36:26, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:212
+2025-12-15 02:36:27, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:36:27, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:36:27, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:36:28, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0

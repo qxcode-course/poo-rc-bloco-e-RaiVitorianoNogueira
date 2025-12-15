@@ -12,14 +12,14 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-12-15 01:02:17'
+  cache_timestamp: '2025-12-15 02:09:25'
   filters:
   - herança
 expanded:
 - poo@campanha-principal
 - poo@bloco_f-herança-i
 tasks:
-  poo@zoo: '{rate:100, alone:10, study:60}'
+  poo@zoo: '{rate:100, guide:vi_a_aula_sobre_polimorfismo, alone:10, study:60}'
   poo@pagamento: '{rate:100, alone:10, study:180}'
 flags:
   quests: 0
