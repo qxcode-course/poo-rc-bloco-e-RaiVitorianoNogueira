@@ -21,6 +21,7 @@ expanded:
 tasks:
   poo@zoo: '{rate:100, guide:vi_a_aula_sobre_polimorfismo, alone:10, study:60}'
   poo@pagamento: '{rate:100, alone:10, study:180}'
+  poo@estacionamento: '{rate:100, guide:vi_aulas, alone:10, study:240}'
 flags:
   quests: 0
   tracks: 0
