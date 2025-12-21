@@ -12,8 +12,28 @@
         },
         {
             "label": "2025-12-21_03-06-06",
-            "content": "class Point2d:\n    def __init__(self, x: int, y:int):\n        self.x: int = 0\n        self.y: int = 0\n\n        \n\n\n\n\n\n\n\n\n\n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmain()",
+            "content": "@@ -100,52 +100,8 @@\n  0%0A%0A\n-%0A%0A    def __str__(self):%0A        return%0A    \n     \n",
             "lines": "111"
+        },
+        {
+            "label": "2025-12-21_04-06-47",
+            "content": "@@ -125,24 +125,30 @@\n f):%0A        \n+return\n %0A           \n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-12-21_17-45-33",
+            "content": "@@ -73,10 +73,9 @@\n t = \n-x \n+0\n %0A   \n@@ -93,17 +93,17 @@\n : int = \n-y\n+0\n %0A%0A%0A%0A    \n@@ -133,43 +133,8 @@\n     \n-return f%22(%7Bself.x%7D, %7Bself.y%7D)%22%0A    \n %0A   \n@@ -243,133 +243,8 @@\n ):%0A%0A\n-    shape = Shape()%0A    %0A    while True:%0A        line = input().strip()%0A        args = line.split()%0A        print(line + %22$%22)\n %0A%0A%0A%0A\n",
+            "lines": "115"
+        },
+        {
+            "label": "2025-12-21_17-57-33",
+            "content": "@@ -338,17 +338,24 @@\n  input()\n-%0A\n+.strip()\n %0A       \n@@ -393,104 +393,19 @@\n int(\n-%22$%22 + line)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22%22%0A%0A        \n+line + %22$%22)\n %0A%0A%0A%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2025-12-21_18-01-42",
+            "content": "class Point2d:\n    def __init__(self, x: int, y:int):\n        self.x: int = x \n        self.y: int = y\n\n\n\n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n    \n            \n\n\n\n\n\n\n\n\n\n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n\n    shape = Shape()\n    \n    while True:\n        line = input()\n\n        args = line.split()\n        print(\"$\" + line)\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"\"\n\n        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmain()",
+            "lines": "128"
         }
     ]
 }
